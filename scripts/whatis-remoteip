@@ -1,0 +1,4 @@
+#!/bin/bash
+source base
+
+echo curl http://showremoteip.mijncomputerinfo.nl/
