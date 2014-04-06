@@ -5,4 +5,5 @@ cd $ROOTFOLDER
 git fetch origin
 git reset --hard origin/master
 git checkout
+git pull
 chmod 775 $ROOTFOLDER -R
