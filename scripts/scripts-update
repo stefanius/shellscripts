@@ -2,5 +2,5 @@
 source base
 
 cd $ROOTFOLDER
-git pull
+git checkout
 chmod 775 $ROOTFOLDER -R
