@@ -1,4 +1,6 @@
 #!/bin/bash
 source base
 
-echo curl http://showremoteip.mijncomputerinfo.nl/
+REMOTEIP=$(curl http://showremoteip.mijncomputerinfo.nl/)
+
+echo $REMOTEIP
