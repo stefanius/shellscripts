@@ -6,10 +6,16 @@ clear
 CONFIG=$1
 PARAMS=$2
 
+if [ $CONFIG == 'generate' ] && [ ${#PARAMS} != 0 ]
+then
+    echo 'henk'
+    exit 0
+fi
+
 if [ -f $CONFIGFOLDER/sshs/$CONFIG ]
 then
     source $CONFIGFOLDER/sshs/$CONFIG
-    ssh $EXECUTESSH
+    ssh $EXECUTESSH $PARAMS
 else
     echo There is no sshs config found for "'$CONFIG'". You may want to generate one.
 fi

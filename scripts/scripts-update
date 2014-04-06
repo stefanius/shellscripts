@@ -1,0 +1,5 @@
+#!/bin/sh
+
+source base
+
+git pull
