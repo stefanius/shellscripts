@@ -3,4 +3,4 @@ source base
 
 REMOTEIP=$(curl http://showremoteip.mijncomputerinfo.nl/)
 
-echo $REMOTEIP
+echo "RemoteIP: " $REMOTEIP
