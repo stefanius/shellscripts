@@ -3,3 +3,4 @@
 source base
 
 git pull
+chmod 775 $ROOTFOLDER -R
