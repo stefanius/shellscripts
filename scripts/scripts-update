@@ -1,5 +1,6 @@
 #!/bin/bash
 source base
 
+cd $ROOTFOLDER
 git pull
 chmod 775 $ROOTFOLDER -R
