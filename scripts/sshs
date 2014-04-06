@@ -1,0 +1,15 @@
+#!/bin/bash
+source base
+
+clear
+
+CONFIG=$1
+PARAMS=$2
+
+if [ -f $CONFIGFOLDER/sshs/$CONFIG ]
+then
+    source $CONFIGFOLDER/sshs/$CONFIG
+    ssh $EXECUTESSH
+else
+    echo There is no sshs config found for "'$CONFIG'". You may want to generate one.
+fi
