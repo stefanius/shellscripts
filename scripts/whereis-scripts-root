@@ -1,4 +1,4 @@
 #!/bin/bash
 source base
 
-cd $ROOTFOLDER
+echo $ROOTFOLDER
