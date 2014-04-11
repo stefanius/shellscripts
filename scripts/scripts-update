@@ -1,7 +1,7 @@
 #!/bin/bash
 source base
 
-mv $CONFIGFOLDER ~/.shellscripts.tmp/configs/ -R
+mv $CONFIGFOLDER ~/.shellscripts.tmp/configs/ -r
 
 cd $ROOTFOLDER
 git fetch origin
@@ -9,4 +9,5 @@ git reset --hard origin/master
 git checkout
 git pull
 chmod 775 $ROOTFOLDER -R
-mv ~/.shellscripts.tmp/configs/ $CONFIGFOLDER -R
+mv ~/.shellscripts.tmp/configs/ $CONFIGFOLDER -r
+rm  ~/.shellscripts.tmp -r
