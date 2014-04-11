@@ -10,4 +10,4 @@ git checkout
 git pull
 chmod 775 $ROOTFOLDER -R
 mv ~/.shellscripts.tmp/configs/ $CONFIGFOLDER -r
-rm  ~/.shellscripts.tmp -r
+rm  ~/.shellscripts.tmp -R
