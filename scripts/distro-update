@@ -1,4 +1,14 @@
 #!/bin/sh
 
-sudo apt-get update
-sudo apt-get upgrade
+DISTRO=$(uname -a)
+
+echo "Your *nix distribution: $DISTRO"
+
+if [[ $DISTRO == *Ubuntu* ]]
+then
+    sudo apt-get update
+    sudo apt-get upgrade
+else
+    echo "'distro-update' is only available on Ubuntu Linux distributions."
+fi
+
