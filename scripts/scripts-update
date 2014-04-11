@@ -1,6 +1,9 @@
 #!/bin/bash
 source base
 
+mkdir ~/.shellscripts.tmp/
+mkdir ~/.shellscripts.tmp/configs/
+
 mv $CONFIGFOLDER ~/.shellscripts.tmp/configs/
 
 cd $ROOTFOLDER
