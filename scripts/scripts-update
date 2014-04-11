@@ -13,4 +13,3 @@ git checkout
 git pull
 chmod 775 $ROOTFOLDER -R
 mv ~/.shellscripts.tmp/configs/ $CONFIGFOLDER
-rm  ~/.shellscripts.tmp -R
