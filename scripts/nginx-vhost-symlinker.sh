@@ -1,7 +1,10 @@
 #!/bin/sh
+
+NGINX_VHOST_PATH=/etc/nginx/sites-enabled/
+
 find / -name "*.vhost" | while read file; do
 
-SYMLINK=/etc/nginx/sites-enabled/$(basename $file)
+SYMLINK=${NGINX_VHOST_PATH}$(basename $file)
 
 if [ -f $SYMLINK ];
 then
