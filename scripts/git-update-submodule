@@ -1,0 +1,31 @@
+if [ ! -d ".git" ]; then
+  echo "It seems you are not in a GIT repository or not in the root of your repo."
+fi
+
+if [ ! -f .gitmodules ]
+then
+    echo "Missing the '.gitmodules ' file. It seems there is no submodule defined or you are not in de root of your repo"
+fi
+
+ROOTDIR=$PWD  #Store the current directory
+
+while read line           
+do
+   if [[ $line == path* ]] && [[ $line == *=* ]]
+   then
+     MODULEPATH=${line:7}
+   fi           
+             
+done <.gitmodules    
+
+FULLMODULEPATH="${ROOTDIR}/${MODULEPATH}"
+
+git fetch --all
+cd $FULLMODULEPATH
+git fetch --all
+git checkout master && git pull
+cd $ROOTDIR
+git add ${MODULEPATH}
+git commit -m "updating submodule to latest"
+
+echo "Done. Check above log and if you wish you can run 'git push origin master' by yourself"
